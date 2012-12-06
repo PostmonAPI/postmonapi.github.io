@@ -1,20 +1,24 @@
 $(function(){
 	function onAjaxSuccess(data) {
-		$("#result_content")
-			.hide("slow", function() {
-				$("#result_content")
-					.empty()
-					.append("<p>" +
-							"<label>Logradouro: </label>" + data.data['logradouro'] + 
-						"<br />" +
-							"<label>Bairro: </label>" + data.data.bairro + 
-						"<br />" +
-						"<label>Cidade: </label>" + data.data.cidade + 
-						"<br />" +
-						"<label>Estado: </label>" + data.data.estado + 
-						"</p>")
-					.show("slow");
-				});
+		if(data.result == 200) {
+			$("#result_content")
+				.hide("slow", function() {
+					$("#result_content")
+						.empty()
+						.append("<p>" +
+								"<label>Logradouro: </label>" + data.data['logradouro'] + 
+							"<br />" +
+								"<label>Bairro: </label>" + data.data.bairro + 
+							"<br />" +
+							"<label>Cidade: </label>" + data.data.cidade + 
+							"<br />" +
+							"<label>Estado: </label>" + data.data.estado + 
+							"</p>")
+						.show("slow");
+					});
+		} else {
+			onAjaxError(data);
+		} 
 	}
 
 	function onAjaxError(data) {
