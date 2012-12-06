@@ -1,5 +1,5 @@
 $(function(){
-	function onAjaxSucess(data) {
+	function onAjaxSuccess(data) {
 		$("#result_content")
 			.empty()
 			.append(JSON.stringify(data))
@@ -15,7 +15,7 @@ $(function(){
 		$("#result_content").hide("slow");
 
 		$.getJSON("http://api.postmon.com.br/cep/" + $("#cep").val()).
-				sucess(onAjaxSucess).
+				success(onAjaxSuccess).
 				error(onAjaxError);
 	};
 
