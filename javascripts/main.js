@@ -2,7 +2,17 @@ $(function(){
 	function onAjaxSuccess(data) {
 		$("#result_content")
 			.empty()
-			.append($("<p />"))
+			.append("<p>" +
+					"<label>Logradouro: </label>" + data.data.logradouro + 
+				"</p><p>" +
+					"<label>Bairro: </label>" + data.data.bairro + 
+				"</p><p>" +
+				"<label>Cidade: </label>" + data.data.cidade + 
+				"</p><p>" +
+				"<label>Estado: </label>" + data.data.estado + 
+				"</p>")
+			.show("slow");
+				
 				.html($("<label />")
 					.append("Logradouro: ")
 					.append(data.data.logradouro))
