@@ -5,7 +5,7 @@ $(function(){
 				$("#result_content")
 					.empty()
 					.append("<p>" +
-							"<label>Logradouro: </label>" + (data.data['logradouro'] + 
+							"<label>Logradouro: </label>" + data.data['logradouro'] + 
 						"<br />" +
 							"<label>Bairro: </label>" + data.data.bairro + 
 						"<br />" +
