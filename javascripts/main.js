@@ -2,9 +2,10 @@ $(function(){
 	function onAjaxSuccess(data) {
 		$("#result_content")
 			.empty()
-			.append($("<label />")
-				.append("Logradouro: ")
-				.append(data.data.logradouro))
+			.append($("<p />")).
+				.html($("<label />")
+					.append("Logradouro: ")
+					.append(data.data.logradouro))
 			.show("slow");
 
 	}
