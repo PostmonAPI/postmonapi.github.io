@@ -12,14 +12,6 @@ $(function(){
 				"<label>Estado: </label>" + data.data.estado + 
 				"</p>")
 			.show("slow");
-				
-				.html($("<label />")
-					.append("Logradouro: ")
-					.append(data.data.logradouro))
-			.append($("<p />"))
-				.html($("<label />"))
-			.show("slow");
-
 	}
 
 	function onAjaxError() {
