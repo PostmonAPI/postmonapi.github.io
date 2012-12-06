@@ -2,7 +2,9 @@ $(function(){
 	function onAjaxSuccess(data) {
 		$("#result_content")
 			.empty()
-			.append(JSON.stringify(data))
+			.append($("<label />")
+				.append("Logradouro: ")
+				.append(data.data.Logradouro)
 			.show("slow");
 
 	}
