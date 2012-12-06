@@ -343,6 +343,12 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
+
+#sample_content label {
+  display: block;
+  width: 7em;
+  float: left;
+}
 /* #Media Queries
 ================================================== */
 

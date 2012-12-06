@@ -3,6 +3,10 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
@@ -43,7 +47,7 @@
 
         <hr>
 
-        <section id="main_content">
+        <section id="what_content">
           <h1>O que é?</h1>
 
           <p>Uma API para consultar CEP's de maneira fácil, rápida e gratuita.</p>
@@ -52,13 +56,24 @@
 
         <hr>
 
-        <section id="main_content">
+        <section id="how_content">
           <h1>Como utilizar?</h1>
 
           <p>Como é uma API baseada em REST, basta fazer a seguinte chamada:</p>
             <code>http://api.postmon.com.br/cep/cep_a_consultar</code>
           <p>Onde cep_a_consultar é o número do CEP que deseja consultar as informações. O resultado é retornado em formato JSON</p>
           
+        </section>
+
+        <section id="sample_content">
+          <h1>Exemplo</h1>
+
+          <p>
+            <label for="cep">Informe o CEP:</label><input type="text" maxlength="9" id="cep" placeholder="CEP">
+          </p>
+          <p>
+            <button id="submit">Pesquisar CEP</button>
+          </p>
         </section>
 
         <footer>
