@@ -4,7 +4,7 @@ $(function(){
 			.empty()
 			.append($("<label />")
 				.append("Logradouro: ")
-				.append(data.data.Logradouro)
+				.append(data.data.Logradouro))
 			.show("slow");
 
 	}
