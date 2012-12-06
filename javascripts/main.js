@@ -5,12 +5,12 @@ $(function(){
 				$("#result_content")
 					.empty()
 					.append("<p>" +
-							"<label>Logradouro: </label>" + data.data.logradouro + 
-						"</p><p>" +
+							"<label>Logradouro: </label>" + (data.data['logradouro'] + 
+						"<br />" +
 							"<label>Bairro: </label>" + data.data.bairro + 
-						"</p><p>" +
+						"<br />" +
 						"<label>Cidade: </label>" + data.data.cidade + 
-						"</p><p>" +
+						"<br />" +
 						"<label>Estado: </label>" + data.data.estado + 
 						"</p>")
 					.show("slow");
