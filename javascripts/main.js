@@ -1,21 +1,27 @@
 $(function(){
 	function onAjaxSuccess(data) {
 		$("#result_content")
-			.empty()
-			.append("<p>" +
-					"<label>Logradouro: </label>" + data.data.logradouro + 
-				"</p><p>" +
-					"<label>Bairro: </label>" + data.data.bairro + 
-				"</p><p>" +
-				"<label>Cidade: </label>" + data.data.cidade + 
-				"</p><p>" +
-				"<label>Estado: </label>" + data.data.estado + 
-				"</p>")
-			.show("slow");
+			.hide("slow", function() {
+				$("#result_content")
+					.empty()
+					.append("<p>" +
+							"<label>Logradouro: </label>" + data.data.logradouro + 
+						"</p><p>" +
+							"<label>Bairro: </label>" + data.data.bairro + 
+						"</p><p>" +
+						"<label>Cidade: </label>" + data.data.cidade + 
+						"</p><p>" +
+						"<label>Estado: </label>" + data.data.estado + 
+						"</p>")
+					.show("slow");
+				});
 	}
 
-	function onAjaxError() {
-
+	function onAjaxError(data) {
+		$("#result_content")
+			.empty()
+			.append(JSON.stringify(data))
+			.show("slow");
 	}
 
 	function onSubmitClick() {
