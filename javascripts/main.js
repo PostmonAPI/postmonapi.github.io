@@ -31,7 +31,7 @@ $(function(){
 	function onSubmitClick() {
 		$("#result_content").hide("slow");
 
-		$.getJSON("http://api.postmon.com.br/cep/" + $("#cep").val()).
+		$.getJSON("http://api.postmon.com.br/v1/cep/" + $("#cep").val()).
 				success(onAjaxSuccess).
 				error(onAjaxError);
 	};
