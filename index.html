@@ -50,7 +50,7 @@
         <section id="what_content">
           <h1>O que é?</h1>
 
-          <p>Uma API para consultar CEP's de maneira fácil, rápida e gratuita.</p>
+          <p>Uma API para consultar CEP e encomendas de maneira fácil, rápida e gratuita.</p>
 
         </section>
 
@@ -61,14 +61,22 @@
 
           <p>A versão atual da API é a 1.x.x</p>
 
-          <p>Como é uma API baseada em REST, basta fazer a seguinte chamada:</p>
-            <code>http://api.postmon.com.br/v1/cep/cep_a_consultar</code>
-          <p>Onde cep_a_consultar é o número do CEP que deseja consultar as informações. O resultado é retornado em formato JSON</p>
-          
+          <p>Como é uma API baseada em REST, basta fazer a seguinte chamada para consultar um CEP:</p>
+            <code>http://api.postmon.com.br/v1/cep/*cep_a_consultar*</code>
+          <p>Onde *cep_a_consultar* é o número do CEP que deseja consultar as informações. O resultado é retornado em formato JSON</p>
+
+          <p>Para uma encomenda:</p>
+            <code>http://api.postmon.com.br/v1/track/*provider*/*codigo_rastreio*</code>
+          <p>Onde *provider* é a empresa de logistica responsável pela entrega e *codigo_rastreio* é o código de rastreio do produto que deseja informações. O resultado é retornado em formato JSON</p>
+
+          <p>Providers aceitos:</p>
+          <ul>
+            <li>ect => Correios - Empresa Brasileira de Correios e Telegrafos</li>
+          </ul>
         </section>
 
         <section id="sample_content">
-          <h1>Exemplo</h1>
+          <h1>Exemplo de busca de CEP</h1>
 
           <p>
             <label for="cep">Informe o CEP:</label><input type="text" maxlength="9" id="cep" placeholder="CEP">
