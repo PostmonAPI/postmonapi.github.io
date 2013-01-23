@@ -238,7 +238,6 @@ td {
 }
 
 form {
-  background: #f2f2f2;
   padding: 20px;
   
 }
@@ -349,6 +348,19 @@ footer a:hover {
   width: 7em;
   float: left;
 }
+
+#donation_content label {
+  display: block;
+  width: 7em;
+  float: left;
+}
+
+.footer_content{
+  float: left;
+  padding-right: 20px;
+  padding-top: 25px;
+}
+
 /* #Media Queries
 ================================================== */
 
